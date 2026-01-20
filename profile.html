@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - AIR-CRAFT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="promo-banner">
+        SPECIAL OFFER: Get 10% OFF on purchases over $100,000,000!
+    </div>
+    <header>
+        <div class="container navbar">
+            <div class="logo">AIR-<span>CRAFT</span></div>
+            <nav>
+                <button id="cartBtn" class="btn btn-outline" style="font-size: 0.8rem;">Cart</button>
+
+                <a href="index.html" class="btn btn-outline" style="font-size: 0.8rem;">Back to Home</a>
+                <button class="btn btn-outline logout-btn" style="font-size: 0.8rem;">Log Out</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container login-container" style="height: calc(100vh - 80px);">
+        <div class="login-card">
+            <h2 style="margin-bottom: 0.5rem;">User Profile</h2>
+            <div style="font-size: 4rem; margin-bottom: 1rem;">👤</div>
+
+            <div class="input-group" style="text-align: center;">
+                <label>Name</label>
+                <h3 id="profileName" style="color: var(--primary); margin-bottom: 1.5rem;">Guest</h3>
+
+                <label>Email</label>
+                <p id="profileEmail" style="font-size: 1.1rem; margin-bottom: 1.5rem;">not@logged.in</p>
+
+
+            </div>
+
+            <button id="logoutBtn" class="btn btn-primary logout-btn"
+                style="width: 100%; margin-top: 2rem; background: linear-gradient(135deg, #ff0055, #7000ff);">Log
+                Out</button>
+        </div>
+    </div>
+
+
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal-overlay">
+        <div class="modal" style="max-width: 600px;">
+            <button class="modal-close cart-close">&times;</button>
+            <h2 style="margin-bottom: 0.5rem;">Shopping Cart</h2>
+
+            <div class="cart-items" id="cartItemsContainer">
+                <!-- Cart items will be here -->
+                <p style="text-align: center; color: var(--text-muted); margin: 2rem 0;">Your cart is empty.</p>
+            </div>
+
+            <div class="cart-summary" id="cartSummary">
+                <div class="cart-total-row">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal">$0</span>
+                </div>
+                <div class="cart-total-row discount-row" id="cartDiscountRow" style="display: none;">
+                    <span>Discount (10%):</span>
+                    <span id="cartDiscount">-$0</span>
+                </div>
+                <div class="cart-total-row final-total">
+                    <span>Total:</span>
+                    <span id="cartFinalTotal">$0</span>
+                </div>
+            </div>
+
+            <button id="checkoutBtn" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Buy Now</button>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
